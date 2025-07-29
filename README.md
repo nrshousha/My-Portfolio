@@ -8,5 +8,3 @@ An about me section that provides additional information about you and your inte
 
 A contact me section that includes information for users to get in touch with you.
 
-
-https://portfolio-website-mauve-rho-85.vercel.app/svg/canva.svg
