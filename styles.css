@@ -1,0 +1,349 @@
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body{
+    background-color: #160B11;
+    color: #F3F4F4;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.hero {
+    position: relative;
+    padding: 3rem;
+    max-width: 800px;
+    z-index: 1;
+}
+
+h1{
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 130px;
+    margin-bottom: 0.5rem;
+}
+#name{
+    font-family: "Playwrite AU QLD", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 0rem;
+    line-height: 1.1; 
+}
+#slogan{
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+    padding-top: 1rem;
+}
+.blur-bg {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    bottom: 1px;
+    right: 1px;
+    background: radial-gradient(circle at 70% 70%,#50204d, #c2385c, #a03794 , #9A60AB,transparent);
+    filter: blur(100px);
+    z-index: 0;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: 280px 280px;
+    grid-template-rows: 70px 70px;
+    gap: 30px;
+    column-gap: 40px;
+    padding-bottom: 200px;
+    margin-top: 60px;
+}
+.gradient-btn  {
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FF66C4; /* pinkish color */
+    background-color: transparent;
+    border: 2px solid;
+    border-image-slice: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+}
+.gradient-btn:hover {
+    background: linear-gradient(90deg, #b362ff20, #ff66cc20); /* subtle fill */
+    color: #F3F4F4;
+}
+
+.gradient-btn:hover::after {
+    transform: translateX(5px);
+}
+
+
+.projectContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16%;
+    box-shadow: 0 4px 8px 0 rgba(120, 89, 108, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(180, 100, 140, 0.4); 
+}
+
+.card img {
+    width: 100%;
+    height: 290px;
+    border-radius: 16%;
+    margin-top: 20px;
+    max-width: 100%;
+    aspect-ratio: 3 / 2; /* 🧠 THIS is the trick */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+.card:hover  img {
+    transform: scale(1.07);
+}
+
+
+.projectcard{
+    margin: 2rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: medium;
+    margin-top: 0rem;
+    color: #d4d5d5 ;
+}
+
+h4{
+    text-align: center;
+    margin: 2rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: xx-large;
+    margin-bottom: 0.7rem;
+        color: #F3F4F4 ;
+
+}
+
+h2{
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 80px;
+    margin-bottom: 60px;
+}
+
+.tech-stack-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    padding: 2rem 0;
+    height: 80px; /* or whatever height matches the logos */
+    margin-bottom: 200px;
+}
+
+.tech-stack-wrapper {
+    display: flex;
+    width: max-content;
+    animation: scroll-loop 25s linear infinite;
+    gap: 30px; /* spacing between items */
+}
+
+.tech-stack-item {
+    display: flex;
+    flex : 0 0 auto;
+    margin: 0 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes scroll-loop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.tech-stack-item img {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(1.2);
+    transition: transform 0.3s ease;
+    align-items: center;    
+}
+
+.tech-stack-item img:hover{
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    #name {
+        font-size: 50px;
+    }
+
+    p, .projectcard {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        grid-template-columns: minmax(50px, 150px) ;
+        grid-template-rows: repeat(4, 70px);
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 1.5rem 1rem;
+        max-width: 100%;
+    }
+
+    .gradient-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    h4 {
+        font-size: x-large;
+    }
+
+    .projectContainer {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+.contact-section {
+    padding: 100px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: #F3F4F4;
+}
+
+.contact-section h2 {
+    font-size: 60px;
+    margin-bottom: 1rem;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.contact-intro {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #ccc;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    background-color: #48283c;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #F3F4F4;
+    font-size: 1rem;
+    font-family: "Roboto Condensed", sans-serif;
+    transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #FF66C4;
+}
+
+.gradient-btn {
+    background: transparent;
+    color: #FF66C4;
+    border: 2px solid #FF66C4;
+    text-transform: uppercase;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gradient-btn:hover {
+    background: linear-gradient(90deg, #b362ff20, #ff66cc20);
+    color: #F3F4F4;
+}
+
+.social-links {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.social-links a {
+    color: #FF66C4;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+footer a {
+  display: inline-block; /* or flex if needed */
+    padding: 10px 20px;
+    font-size: 1.1rem;
+}
